@@ -42,7 +42,7 @@ public class ChatConnection {
                 }
 
             } catch (IOException e) {
-               // throw new RuntimeException(e);
+                throw new RuntimeException(e);
             } finally {
                 listener.onDisconnect(ChatConnection.this);         //вихід з чату
             }
