@@ -37,7 +37,7 @@ public class ChatConnection {
             try {
                 while (true) {                                              //читання повідомлень з чату
                     String massage = reader.readLine();
-                    if (massage == null || massage.toLowerCase().equals("exit")) break;     //вихід з чату
+                    if (massage == null || massage.equalsIgnoreCase("exit")) break;     //вихід з чату
                     listener.onMessage(ChatConnection.this, massage);
                 }
 
